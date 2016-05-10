@@ -37,7 +37,7 @@ public class Controller implements Initializable {
     }
 
     public void removeContact() {
-        storeContacts contact = (storeContacts) list.getSelectionModel().getSelectedItems();
+        storeContacts contact = (storeContacts) list.getSelectionModel().getSelectedItem();
         contacts.remove(contact);
     }
 

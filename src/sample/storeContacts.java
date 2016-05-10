@@ -1,14 +1,18 @@
 package sample;
 
-/**
- * Created by Ultramar on 4/11/16.
- */
+
 public class storeContacts {
 
-    String text = (("%s, %s, %s"), name ,phone, email);
+    String text;
+    String name;
+    String phone;
+    String email;
 
-    public void storeContacts(String text) {
-        this.text = text;
+    public void storeContacts(String name, String phone, String email) {
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+        text = name + "," + email + "," + phone;
     }
 
 

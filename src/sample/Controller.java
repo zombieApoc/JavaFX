@@ -27,11 +27,9 @@ public class Controller{
     @FXML
     public TextField email;
 
-    @FXML
-    public Button add;
+    public void addContact() {
 
-    @FXML
-    public Button remove;
+    }
 
 
 }

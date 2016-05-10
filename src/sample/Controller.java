@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
 
 import static java.awt.SystemColor.text;
 
-public class Controller implements Initializable{
+public class Controller{
 
     @FXML
     public ListView list;
@@ -33,24 +33,5 @@ public class Controller implements Initializable{
     @FXML
     public Button remove;
 
-
-
-
-    ObservableList<storeContacts> contacts = FXCollections.observableArrayList();
-
-    @Override
-    public void initialize(URL Location, ResourceBundle) {
-        list.setItems(contacts);
-    }
-
-    public void addItem() {
-        contacts.add(new storeContacts(text.getText()));
-        text.setText("");
-    }
-
-    public void removeItem() {
-        storeContacts item = (ToDoItem) list.getSelectionModel().getSelectedItem();
-        contacts.remove(item);
-    }
 
 }

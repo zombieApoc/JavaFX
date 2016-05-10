@@ -5,7 +5,7 @@ package sample;
  */
 public class storeContacts {
 
-    String text = ("%s, %s, %s", name ,phone, email) ;
+    String text = (("%s, %s, %s"), name ,phone, email);
 
     public void storeContacts(String text) {
         this.text = text;

@@ -31,10 +31,14 @@ public class Controller implements Initializable {
 
     public void addContact() {
         contacts.add(new storeContacts(name.getText(), phone.getText(), email.getText()));
+        name.setText("");
+        phone.setText("");
+        email.setText("");
     }
 
     public void removeContact() {
-
+        storeContacts contact = (storeContacts) list.getSelectionModel().getSelectedItems();
+        contacts.remove(contact);
     }
 
     @Override

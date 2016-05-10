@@ -12,7 +12,7 @@ public class storeContacts {
         this.name = name;
         this.phone = phone;
         this.email = email;
-        text = name + "," + email + "," + phone;
+        text = name + "," + phone + "," + email;
     }
 
 

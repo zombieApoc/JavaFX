@@ -13,7 +13,9 @@ import java.util.ResourceBundle;
 
 import static java.awt.SystemColor.text;
 
-public class Controller{
+public class Controller implements Initializable {
+
+    ObservableList<storeContacts> contacts = FXCollections.observableArrayList();
 
     @FXML
     public ListView list;
@@ -28,7 +30,16 @@ public class Controller{
     public TextField email;
 
     public void addContact() {
+        contacts.add(new storeContacts(name.getText(), phone.getText(), email.getText()));
+    }
 
+    public void removeContact() {
+
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        list.setItems(contacts);
     }
 
 
